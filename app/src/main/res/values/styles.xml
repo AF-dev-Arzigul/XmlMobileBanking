@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EditTextLoginRegister" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeColor">@android:color/transparent</item>
+<!--        <item name="boxBackgroundColor">@color/grey</item>-->
+<!--        <item name="android:textColorHint">@color/greyLight2</item>-->
+<!--        <item name="startIconTint">@color/greyLight2</item>-->
+<!--        <item name="endIconTint">@color/greyLight2</item>-->
+<!--        <item name="hintTextColor">@color/violet</item>-->
+    </style>
+</resources>

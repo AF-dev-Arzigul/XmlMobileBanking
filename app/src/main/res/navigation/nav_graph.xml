@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.maobilebanking.ui.screens.splashscreen.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/nav_graph.xml" />
+        <action
+            android:id="@+id/action_splashScreen_to_introScreen"
+            app:destination="@id/introScreen"
+            app:popUpTo="@id/nav_graph.xml" />
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen2"
+            app:destination="@id/mainScreen2"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.example.maobilebanking.ui.screens.auth.signin.LoginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreen_to_signUpScreen"
+            app:destination="@id/signUpScreen" />
+        <action
+            android:id="@+id/action_loginScreen_to_signInverifyScreen2"
+            app:destination="@id/signInverifyScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/introScreen"
+        android:name="com.example.maobilebanking.ui.screens.intro.IntroScreen"
+        android:label="fragment_intro_screen"
+        tools:layout="@layout/fragment_intro_screen" >
+        <action
+            android:id="@+id/action_introScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/nav_graph.xml" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpScreen"
+        android:name="com.example.maobilebanking.ui.screens.auth.signup.SignUpScreen"
+        android:label="fragment_sign_up_screen"
+        tools:layout="@layout/fragment_sign_up_screen" >
+        <action
+            android:id="@+id/action_signUpScreen_to_signUpVerifyScreen"
+            app:destination="@id/signUpVerifyScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpVerifyScreen"
+        tools:layout="@layout/fragment_signup_verify_screen"
+        android:name="com.example.maobilebanking.ui.screens.auth.signin.verify.SignUpVerifyScreen"
+        android:label="SignUpVerifyScreen" >
+        <argument
+            android:name="token"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_signUpVerifyScreen_to_mainScreen2"
+            app:destination="@id/mainScreen2"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInverifyScreen"
+        tools:layout="@layout/fragment_signin_verify_screen"
+        android:name="com.example.maobilebanking.ui.screens.auth.signin.signINverify.SignInVerifyScreen"
+        android:label="SignInverifyScreen" >
+        <argument
+            android:name="token"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_signInverifyScreen_to_mainScreen2"
+            app:destination="@id/mainScreen2"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen2"
+        android:name="com.example.maobilebanking.ui.screens.home.MainScreen"
+        android:label="screen_main"
+        tools:layout="@layout/screen_main" />
+</navigation>
+
+
+
+
